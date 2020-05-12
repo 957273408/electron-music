@@ -10,15 +10,26 @@
     "@types/node": "^12.12.38",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "apicache": "^1.5.3",
+    "electron-json-storage": "^4.1.8",
+    "electron-window-state": "^5.0.3",
+    "eslint": "^7.0.0",
+    "express": "^4.17.1",
+    "pac-proxy-agent": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "request": "^2.88.2",
+    "styled-components": "^5.1.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "electron ./main.js",
+    "server": "node ./server/app.js",
+    "react": "react-scripts start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,5 +46,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint": "^6.0.2",
+    "husky": "^4.2.5",
+    "intelli-espower-loader": "^1.0.1",
+    "lint-staged": "^10.2.2",
+    "mocha": "^7.1.2",
+    "power-assert": "^1.6.1"
   }
 }
