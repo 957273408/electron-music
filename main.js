@@ -84,7 +84,7 @@ app.allowRendererProcessReuse = false;
 // 当应用被激活时发出。 各种操作都可以触发此事件, 
 // 例如首次启动应用程序、尝试在应用程序已运行时或单击应用程序的坞站或任务栏图标时重新激活它。
 app.on('activate', e => {
-  console.log(3333)
+  console.log(activate)
 })
 
 // 在应用程序开始关闭窗口之前触发。 调用 event.preventDefault() 会阻止默认的行为。默认的行为是终结应用程序。
