@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "electron ./main.js",
-    "server": "node ./server/app.js",
+    "server": "nodemon ./server/app.js",
     "react": "react-scripts start",
     "eject": "react-scripts eject"
   },

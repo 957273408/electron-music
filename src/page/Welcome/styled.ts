@@ -147,7 +147,7 @@ export const LinkClearfix = styled(Link)`
     transform: scale(1);
   }
 
-  &:hover [class^="Component-status-"] {
+  &:hover [class="Component-status-"] {
     opacity: 0;
     transform: scale(0.8);
   }
@@ -175,4 +175,96 @@ export const StatusDiv = styled.div`
   background: white;
   z-index: 2;
   transition: 0.2s;
+`;
+
+export const Figure = styled.figure`
+  position: relative;
+  height: 120px;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(
+    110deg,
+    rgb(255, 103, 0) 0%,
+    rgb(255, 45, 240) 100%
+  );
+  font-family: Roboto;
+  font-weight: lighter;
+  color: white;
+  overflow: hidden;
+
+  & figcaption {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    margin-top: -25px;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+  }
+
+  & summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 7px 0;
+    padding-left: 20px;
+  }
+  & .background {
+    transition: 0.2s;
+    transform: translateY(-50%) scale(1);
+  }
+
+  & .cover {
+    box-shadow: 0 0 24px red;
+  }
+  & summary p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 180;
+    word-spacing: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  & summary small {
+    font-size: 12px;
+    color: #eee;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+
+  &.favorite {
+    &::after {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.recommend {
+    &::after {
+      content: none;
+    }
+  }
+  &.large {
+    height: 160px;
+    & summary p {
+      color: #000;
+    }
+    & summary small {
+      color: #333;
+    }
+  }
+
+  & .album {
+    transform: translateY(-8px);
+  }
 `;
